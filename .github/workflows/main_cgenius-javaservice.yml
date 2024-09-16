@@ -42,7 +42,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-
+          
+      - name: Azure Login
+        uses: Azure/login@v2.1.1
+          
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
